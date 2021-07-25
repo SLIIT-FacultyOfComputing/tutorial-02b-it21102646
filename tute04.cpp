@@ -15,7 +15,22 @@ int main() {
   return 0;
 }long nCr(int n,int r)
 {
-  
+  int a,b,c;
+  long fac_a=1,fac_b=1,fac_c=1;
+
+  for(a=n;a>=1;a--)
+  {
+    fac_a=fac_a*a;
+  }
+  for(b=r;b>=1;b--)
+  {
+    fac_b=fac_b*b;
+  }
+  for(c=(n-r);c>=1;c--)
+  {
+    fac_c=fac_c*c;
+  }
+  return fac_a/(fac_b*fac_c);
 }
 
  /*- Functions
@@ -31,7 +46,7 @@ long Factorial(int no);
 long nCr(int n, int r);
 Do not modify the main function.*/
 
-#include <iostream>
+/*#include <iostream>
 
 long Factorial(int no);
 long nCr(int n, int r);
@@ -46,4 +61,5 @@ int main() {
   std::cout << nCr(n,r);
   std::cout << std::endl;
   return 0;
-}
+}*/
+
