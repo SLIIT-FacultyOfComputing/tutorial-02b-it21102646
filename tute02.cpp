@@ -1,34 +1,39 @@
-#include<iostream>
+#include <iostream>
+#include <iomanip>
 using namespace std;
-
-int main(){
+int main()
+{
    double salary, netSalary;
-   int etype, otHrs, otRate;
-   cout<<"Enter Employee Type : ";
+   int etype, Hrs, Rate;
+   cout<<"Enter emplyee type : "<<endl;
    cin>>etype;
-   cout<<"Enter Salary  : ";
+   
+   cout<<"Enter salary : "<<endl;
    cin>>salary;
-   cout<<"Enter OtHrs : ";
-   cin>>otHrs; 
+   
+   cout<<"Enter Hrs : "<<endl;
+   cin>>Hrs;
+   
    
    switch (etype) {
       case 1 :
-          otRate = 1000;
+          Rate = 1000;
           break;
       case 2 :
-          otRate = 1500;
+          Rate = 1500;
           break;
       default :
-          otRate = 1700;
+          Rate = 1700;
           break;
    }
 
 
-   netSalary = salary + otHrs* otRate;
-   cout<<"Net Salary is"<<netSalary<<endl;
+   netSalary = salary + Hrs* Rate;
+   cout<<setiosflags(ios::fixed);
+   cout<<"Net Salary is "<<setprecision(2)<<netSalary<<endl;
+   
   
    return 0;
-
 }/*Exercise 2 - Selection
 
 Convert the C program given below which calculates an employee's salary to a C++ program.

@@ -1,15 +1,15 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-int main(){
-float cm, inches;
-
-cout<<"enter a length in cm :";
-cin>>cm;
-inches =cm/2.54;
-cout<<"length in inches is"<<inches<<endl;
-
-return 0;
+int main() 
+{
+    float cm, inch;
+    cout<<"Enter a length in centimeters : "<<endl;
+    cin>>cm;
+    
+    inch= cm / 2.54;
+    cout<<"Length in inches is"<<inch<<endl;
+    
+    return 0;
 }
 
 
